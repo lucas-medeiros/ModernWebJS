@@ -1,12 +1,15 @@
-const value = "Global";
+// Clousure == function scope
+// Allows function to use variables from outter scope
 
-function myFunction() {
-  console.log(value);
+const x = "Global";
+
+function outside() {
+  const x = "Local";
+  function inside() {
+    return x;
+  }
+  return inside;
 }
 
-function exec() {
-  const value = "local";
-  myFunction();
-}
-
-exec();
+const myFunction = outside();
+console.log(myFunction());
