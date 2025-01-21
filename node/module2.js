@@ -1,8 +1,4 @@
-import { goodbye } from "./module1";
-
-export default {
-  greetings,
-  goodbye
+module.exports = {
+  morning: "Good morning!",
+  night: () => "Good night!"
 };
-
-console.log(goodbye)
