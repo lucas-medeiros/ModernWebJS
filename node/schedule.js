@@ -6,8 +6,8 @@ const task1 = schedule.scheduleJob("* * * * *", function() {
 
 setTimeout(function() {
   task1.cancel();
-  console.log("Task 1 cancelled");
-}, 20000);
+  console.log("Task 1 cancelled!");
+}, 30000);
 
 const rule = new schedule.RecurrenceRule();
 rule.dayOfWeek = [new schedule.Range(1, 7)];
