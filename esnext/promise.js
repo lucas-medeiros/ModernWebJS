@@ -1,0 +1,3 @@
+function speakAfterSeconds(seconds, word) {
+    
+}
