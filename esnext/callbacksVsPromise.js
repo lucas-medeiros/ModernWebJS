@@ -28,10 +28,7 @@ getStudents("A", students => {
 });
 
 // ------------------------------------------------------------
-// Same thing but with promise
-const axios = require("axios");
-
-// Using only callbacks => No promise
+// Same thing but with promise - Using only callbacks => No promise
 const getStudentsWithPromise = name => {
   const path = url + "turma" + name + ".json";
   return new Promise((resolve, reject) => {
