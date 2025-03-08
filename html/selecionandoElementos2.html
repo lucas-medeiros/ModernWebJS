@@ -10,7 +10,26 @@
     <div>Segundo</div>
     <div class="terceiro ultimo"><span wb-attrib>.terceiro .ultimo</span></div>
     <script>              
-        // ...
+        document.querySelector('#primeiro').classList.add('destaque');
+
+        const select = (selector, add = true) => 
+            document.querySelectorAll(selector)
+                    .forEach(e => {
+                        if (add) e.classList.add('destaque');
+                        else e.classList.remove('destaque');
+                    });
+
+        select('div');
+        select('*', false);
+        select('.terceiro.ultimo');
+        select('*', false);
+        select(':not(#primeiro)');
+        select('*', false);
+        select(':nth-child(1)');
+        select('*', false);
+        select('div:nth-of-type(1)');
+        select('*', false);
+        select('[wb-attrib]');
     </script>
 </body>
 </html>

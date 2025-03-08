@@ -18,10 +18,12 @@ waitFor(2000)
 async function execute() {
   await waitFor(1500);
   console.log("Await promise 1");
+
   await waitFor(1500);
-  console.log("Await promise 1");
+  console.log("Await promise 2");
+
   await waitFor(1500);
-  console.log("Await promise 1");
+  console.log("Await promise 3");
 
   return 0;
 }
