@@ -9,9 +9,22 @@
 
 <body class="conteudo exercicio">
     <div>
-        <a href="https://google.com.br">Google</a>
+        <a wait href="https://google.com.br", onclick="searchAfterSeconds(event)">Google</a>
     </div>
     <script>
-        // ...
+        function searchAfterSeconds(e, seconds = 5) {
+            e.preventDefault();
+            console.log(`searching in ${seconds}...`);
+            setTimeout(() => {
+                const link = e.target;
+                window.location.href = link.href;
+            }, seconds * 1000);
+        }
+
+        // const a = document.querySelector('a');
+        // a.onclick = searchAfterSeconds;
+        
+        const a = document.querySelector('[wait]');
+        a.onclick = searchAfterSeconds;
     </script>
 </body>
